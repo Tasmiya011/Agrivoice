@@ -1,0 +1,42 @@
+[
+  {
+    "rule_id": "R001",
+    "scheme_id": "S001",
+    "land_required": 1,
+    "farmer_type": "Landholder",
+    "income_tax_payer_allowed": 0,
+    "crop_damage_relevant": 0,
+    "crop_types": "",
+    "other_conditions": "Eligible landholding farmer families are identified and verified by the State/UT administration; scheme exclusions apply. This system provides preliminary guidance only."
+  },
+  {
+    "rule_id": "R002",
+    "scheme_id": "S002",
+    "land_required": 0,
+    "farmer_type": "Cultivator",
+    "income_tax_payer_allowed": 1,
+    "crop_damage_relevant": 1,
+    "crop_types": "notified crops",
+    "other_conditions": "Coverage depends on the notified crop, season, area, state/UT rules and enrolment/claim conditions. Do not treat crop damage alone as proof of eligibility."
+  },
+  {
+    "rule_id": "R003",
+    "scheme_id": "S003",
+    "land_required": 0,
+    "farmer_type": "Owner cultivator / Tenant farmer / Sharecropper",
+    "income_tax_payer_allowed": 1,
+    "crop_damage_relevant": 0,
+    "crop_types": "agricultural crops/allied activities",
+    "other_conditions": "Participating banks assess applications and may apply institution/location-specific requirements."
+  },
+  {
+    "rule_id": "R004",
+    "scheme_id": "S004",
+    "land_required": 1,
+    "farmer_type": "Farmer / Cultivator",
+    "income_tax_payer_allowed": 1,
+    "crop_damage_relevant": 0,
+    "crop_types": "",
+    "other_conditions": "Availability and field/lab process can depend on the local agriculture department and soil testing arrangements."
+  }
+]

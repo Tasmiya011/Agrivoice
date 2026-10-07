@@ -1,0 +1,38 @@
+[
+  {
+    "scheme_id": "S001",
+    "scheme_name": "PM-KISAN Samman Nidhi",
+    "description": "Income support scheme for eligible landholding farmer families.",
+    "benefits": "₹6,000 per year in three equal instalments, subject to scheme rules and verification.",
+    "category": "Financial Support",
+    "active": 1,
+    "application_link": "https://www.pmkisan.gov.in/RegistrationFormupdated.aspx"
+  },
+  {
+    "scheme_id": "S002",
+    "scheme_name": "Pradhan Mantri Fasal Bima Yojana",
+    "description": "Crop insurance support against covered crop losses and risks under the applicable season and state notification.",
+    "benefits": "Insurance protection for notified crops and risks; claims and coverage depend on applicable guidelines and enrolment.",
+    "category": "Insurance",
+    "active": 1,
+    "application_link": "https://pmfby.gov.in/"
+  },
+  {
+    "scheme_id": "S003",
+    "scheme_name": "Kisan Credit Card (KCC)",
+    "description": "Timely credit support for cultivation and eligible agricultural and allied activities.",
+    "benefits": "Flexible agricultural credit through participating banks, subject to bank appraisal and applicable terms.",
+    "category": "Credit",
+    "active": 1,
+    "application_link": "https://www.myscheme.gov.in/schemes/kcc"
+  },
+  {
+    "scheme_id": "S004",
+    "scheme_name": "Soil Health Card Scheme",
+    "description": "Soil testing and nutrient-management recommendations to help farmers make informed soil and fertilizer decisions.",
+    "benefits": "Soil test information and recommendations for nutrient management.",
+    "category": "Soil & Crop Management",
+    "active": 1,
+    "application_link": "https://soilhealth.dac.gov.in/"
+  }
+]

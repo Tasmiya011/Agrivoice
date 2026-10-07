@@ -1,0 +1,58 @@
+[
+  {
+    "step_id": "A001",
+    "scheme_id": "S001",
+    "step_order": 1,
+    "title": "Check preliminary eligibility",
+    "description": "Review landholding and exclusion-related information."
+  },
+  {
+    "step_id": "A002",
+    "scheme_id": "S001",
+    "step_order": 2,
+    "title": "Complete official registration/status process",
+    "description": "Use the official PM-KISAN portal and follow the current registration instructions."
+  },
+  {
+    "step_id": "A003",
+    "scheme_id": "S002",
+    "step_order": 1,
+    "title": "Check notified crop and season",
+    "description": "Confirm that the crop, area and season are covered under the applicable notification."
+  },
+  {
+    "step_id": "A004",
+    "scheme_id": "S002",
+    "step_order": 2,
+    "title": "Enrol through the applicable channel",
+    "description": "Use the official PMFBY portal or the applicable state/bank/service channel."
+  },
+  {
+    "step_id": "A005",
+    "scheme_id": "S003",
+    "step_order": 1,
+    "title": "Choose a participating bank",
+    "description": "Review the bank's KCC process and requirements."
+  },
+  {
+    "step_id": "A006",
+    "scheme_id": "S003",
+    "step_order": 2,
+    "title": "Submit the KCC application",
+    "description": "Provide the documents requested by the bank."
+  },
+  {
+    "step_id": "A007",
+    "scheme_id": "S004",
+    "step_order": 1,
+    "title": "Arrange soil testing",
+    "description": "Follow local agriculture department/soil testing instructions."
+  },
+  {
+    "step_id": "A008",
+    "scheme_id": "S004",
+    "step_order": 2,
+    "title": "Receive and use soil recommendations",
+    "description": "Use the soil report recommendations for crop and nutrient planning."
+  }
+]
