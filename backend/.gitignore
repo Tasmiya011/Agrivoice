@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.env
+venv/
+*.log
+voice/translation_cache.json
+node_modules/
+.venv/
+package-lock-backup.json

@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "AgriVoice Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/health"
+      }
+    },
+    {
+      "name": "Get Schemes",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/schemes"
+      }
+    },
+    {
+      "name": "Get Scheme Details",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/schemes/S001"
+      }
+    },
+    {
+      "name": "Get Documents",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/schemes/S001/documents"
+      }
+    },
+    {
+      "name": "Check Eligibility",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"land_owner\": true, \"cultivates_land\": true, \"farmer_type\": \"landholder\", \"income_tax_payer\": false}"
+        },
+        "url": "http://localhost:5000/eligibility/check"
+      }
+    },
+    {
+      "name": "Recommend Schemes",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"land_owner\": true, \"farmer_type\": \"landholder\", \"crop\": \"rice\", \"crop_damage\": true, \"problem\": \"crop damage due to heavy rain\"}"
+        },
+        "url": "http://localhost:5000/schemes/recommend"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "rule_id": "R001",
+    "scheme_id": "S001",
+    "land_required": 1,
+    "farmer_type": "Landholding farmer family",
+    "income_tax_payer_allowed": 0,
+    "crop_damage_relevant": 0,
+    "crop_types": "",
+    "other_conditions": "For eligible landholding farmer families recorded in State/UT land records. People who paid income tax in the last assessment year are excluded. Other exclusions include specified constitutional posts, ministers/legislators, specified government employees, certain pensioners and registered professionals. Land records, family-level rules and all exclusions must be verified on the official PM-KISAN portal."
+  },
+  {
+    "rule_id": "R002",
+    "scheme_id": "S002",
+    "land_required": 0,
+    "farmer_type": "Farmer with an insurable interest; eligible tenant/sharecropper where permitted",
+    "income_tax_payer_allowed": 1,
+    "crop_damage_relevant": 1,
+    "crop_types": "notified crops",
+    "other_conditions": "The crop and area must be notified for the state and season. The farmer must meet the applicable insurable-interest, enrolment, premium and claim requirements. Tenant/sharecropper cultivation and documents are governed by applicable state/season rules."
+  },
+  {
+    "rule_id": "R003",
+    "scheme_id": "S003",
+    "land_required": 0,
+    "farmer_type": "Owner cultivator; tenant farmer; oral lessee; sharecropper; eligible farmer SHG/JLG",
+    "income_tax_payer_allowed": 1,
+    "crop_damage_relevant": 0,
+    "crop_types": "agricultural crops/allied activities",
+    "other_conditions": "Official myScheme guidance lists owner cultivators, tenant farmers, oral lessees and sharecroppers. Participating banks apply their operational/local requirements, verify documents and assess the credit application."
+  },
+  {
+    "rule_id": "R004",
+    "scheme_id": "S004",
+    "land_required": 0,
+    "farmer_type": "Farmer with a field/soil sample for testing",
+    "income_tax_payer_allowed": 1,
+    "crop_damage_relevant": 0,
+    "crop_types": "",
+    "other_conditions": "Soil Health Card guidance is tied to soil sampling/testing and recommendations. Contact the local agriculture department or soil-testing service for sample collection and local availability."
+  }
+]

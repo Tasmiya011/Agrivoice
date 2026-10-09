@@ -1,0 +1,79 @@
+[
+  {
+    "document_id": "D001",
+    "scheme_id": "S001",
+    "document_name": "Aadhaar/identity document",
+    "mandatory": 1,
+    "description": "Used to verify the farmer identity and link the beneficiary record to the scheme registration."
+  },
+  {
+    "document_id": "D002",
+    "scheme_id": "S001",
+    "document_name": "Landholding/land record information",
+    "mandatory": 1,
+    "description": "Used to verify the agricultural landholding recorded for the farmer/family."
+  },
+  {
+    "document_id": "D003",
+    "scheme_id": "S001",
+    "document_name": "Bank account details",
+    "mandatory": 1,
+    "description": "Used for receiving eligible benefit payments through the applicable bank account."
+  },
+  {
+    "document_id": "D004",
+    "scheme_id": "S002",
+    "document_name": "Land/cultivation and crop details",
+    "mandatory": 1,
+    "description": "Shows the crop, cultivated area and other information needed for the applicable crop-insurance enrolment/claim process."
+  },
+  {
+    "document_id": "D005",
+    "scheme_id": "S002",
+    "document_name": "Bank account details",
+    "mandatory": 1,
+    "description": "Used for premium/benefit/claim-related banking information where applicable."
+  },
+  {
+    "document_id": "D006",
+    "scheme_id": "S002",
+    "document_name": "Identity/contact details",
+    "mandatory": 1,
+    "description": "Used to identify and contact the farmer for the insurance process."
+  },
+  {
+    "document_id": "D007",
+    "scheme_id": "S003",
+    "document_name": "KCC/application form",
+    "mandatory": 1,
+    "description": "The prescribed KCC application form or digital application submitted to the participating bank."
+  },
+  {
+    "document_id": "D008",
+    "scheme_id": "S003",
+    "document_name": "Identity and address proof",
+    "mandatory": 1,
+    "description": "Confirms the applicant identity and address for bank/KCC processing."
+  },
+  {
+    "document_id": "D009",
+    "scheme_id": "S003",
+    "document_name": "Proof of landholding/cultivation as applicable",
+    "mandatory": 1,
+    "description": "Helps the bank assess agricultural landholding/cultivation and the eligible credit requirement."
+  },
+  {
+    "document_id": "D010",
+    "scheme_id": "S004",
+    "document_name": "Farmer/field details",
+    "mandatory": 1,
+    "description": "Identifies the farmer and field to arrange the applicable soil test."
+  },
+  {
+    "document_id": "D011",
+    "scheme_id": "S004",
+    "document_name": "Soil sample/field information as instructed locally",
+    "mandatory": 1,
+    "description": "Provides the sample/field information needed by the local soil-testing facility."
+  }
+]

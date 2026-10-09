@@ -1,0 +1,32 @@
+[
+  {
+    "faq_id": "F001",
+    "scheme_id": "S001",
+    "question": "What is PM-KISAN?",
+    "answer": "PM-KISAN is a Government of India income-support scheme for eligible landholding farmer families. Final eligibility is subject to official rules and verification."
+  },
+  {
+    "faq_id": "F002",
+    "scheme_id": "S001",
+    "question": "Who can apply for PM-KISAN?",
+    "answer": "Eligible landholding farmer families may be covered, subject to exclusions and verification by the State/UT administration."
+  },
+  {
+    "faq_id": "F003",
+    "scheme_id": "S002",
+    "question": "What is crop insurance?",
+    "answer": "PMFBY provides crop insurance coverage for notified crops and risks under the applicable season, state and scheme conditions."
+  },
+  {
+    "faq_id": "F004",
+    "scheme_id": "S003",
+    "question": "What is Kisan Credit Card?",
+    "answer": "KCC provides timely agricultural credit to eligible farmers and certain tenant/sharecropper groups through participating banks."
+  },
+  {
+    "faq_id": "F005",
+    "scheme_id": "S004",
+    "question": "What is a Soil Health Card?",
+    "answer": "It provides soil-test information and recommendations to help farmers manage nutrients and fertilizers."
+  }
+]

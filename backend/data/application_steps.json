@@ -1,0 +1,58 @@
+[
+  {
+    "step_id": "A001",
+    "scheme_id": "S001",
+    "step_order": 1,
+    "title": "Check preliminary eligibility",
+    "description": "Review landholding, beneficiary and exclusion information. The final decision is based on official records and current scheme rules."
+  },
+  {
+    "step_id": "A002",
+    "scheme_id": "S001",
+    "step_order": 2,
+    "title": "Complete official registration/status process",
+    "description": "Open the official PM-KISAN portal, complete the current registration/status process and submit the requested details. Keep the acknowledgement/reference number."
+  },
+  {
+    "step_id": "A003",
+    "scheme_id": "S002",
+    "step_order": 1,
+    "title": "Check notified crop and season",
+    "description": "Check whether the crop, notified area, season and risk are covered by the current state/season notification before enrolment or claim action."
+  },
+  {
+    "step_id": "A004",
+    "scheme_id": "S002",
+    "step_order": 2,
+    "title": "Enrol through the applicable channel",
+    "description": "Use the official PMFBY portal or the applicable bank/state/service channel, submit the requested details and retain the receipt or acknowledgement."
+  },
+  {
+    "step_id": "A005",
+    "scheme_id": "S003",
+    "step_order": 1,
+    "title": "Choose a participating bank",
+    "description": "Choose a participating bank and ask for its current KCC eligibility, limit, interest and document requirements."
+  },
+  {
+    "step_id": "A006",
+    "scheme_id": "S003",
+    "step_order": 2,
+    "title": "Submit the KCC application",
+    "description": "Fill the KCC application, attach the requested documents and submit it to the bank or its supported digital channel. Keep the acknowledgement."
+  },
+  {
+    "step_id": "A007",
+    "scheme_id": "S004",
+    "step_order": 1,
+    "title": "Arrange soil testing",
+    "description": "Contact the local agriculture department or authorised soil-testing facility and follow its sample collection instructions."
+  },
+  {
+    "step_id": "A008",
+    "scheme_id": "S004",
+    "step_order": 2,
+    "title": "Receive and use soil recommendations",
+    "description": "Collect the soil-health report and follow its crop/nutrient recommendations; consult the agriculture department if any recommendation is unclear."
+  }
+]
