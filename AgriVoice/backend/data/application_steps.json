@@ -3,56 +3,112 @@
     "step_id": "A001",
     "scheme_id": "S001",
     "step_order": 1,
-    "title": "Check preliminary eligibility",
-    "description": "Review landholding and exclusion-related information."
+    "title": "Check landholding eligibility",
+    "description": "Confirm that your family meets the current PM-KISAN landholding rules and that no scheme exclusion applies."
   },
   {
     "step_id": "A002",
     "scheme_id": "S001",
     "step_order": 2,
-    "title": "Complete official registration/status process",
-    "description": "Use the official PM-KISAN portal and follow the current registration instructions."
+    "title": "Prepare your details",
+    "description": "Keep your Aadhaar, active mobile number, bank account details and land-record information ready. Check the official portal for the current document requirements."
   },
   {
     "step_id": "A003",
-    "scheme_id": "S002",
-    "step_order": 1,
-    "title": "Check notified crop and season",
-    "description": "Confirm that the crop, area and season are covered under the applicable notification."
+    "scheme_id": "S001",
+    "step_order": 3,
+    "title": "Submit the registration or correction",
+    "description": "Use the official PM-KISAN portal or an authorized service centre, complete the applicable registration or correction process, and follow the on-screen verification instructions."
   },
   {
     "step_id": "A004",
-    "scheme_id": "S002",
-    "step_order": 2,
-    "title": "Enrol through the applicable channel",
-    "description": "Use the official PMFBY portal or the applicable state/bank/service channel."
+    "scheme_id": "S001",
+    "step_order": 4,
+    "title": "Save the reference and track verification",
+    "description": "Save the acknowledgement or registration number and check the application status on the official portal. The relevant State or Union Territory authorities verify records."
   },
   {
     "step_id": "A005",
-    "scheme_id": "S003",
+    "scheme_id": "S002",
     "step_order": 1,
-    "title": "Choose a participating bank",
-    "description": "Review the bank's KCC process and requirements."
+    "title": "Check the crop and season notification",
+    "description": "Confirm with your State agriculture department, insurer or official PMFBY portal that your crop, location and season are notified and note the enrolment deadline."
   },
   {
     "step_id": "A006",
-    "scheme_id": "S003",
+    "scheme_id": "S002",
     "step_order": 2,
-    "title": "Submit the KCC application",
-    "description": "Provide the documents requested by the bank."
+    "title": "Prepare the required information",
+    "description": "Keep your identity and bank details, land or eligible cultivation documents, crop name, insured area and sowing information ready. Requirements can vary by State and season."
   },
   {
     "step_id": "A007",
-    "scheme_id": "S004",
-    "step_order": 1,
-    "title": "Arrange soil testing",
-    "description": "Follow local agriculture department/soil testing instructions."
+    "scheme_id": "S002",
+    "step_order": 3,
+    "title": "Enrol through an authorized channel",
+    "description": "Apply before the notified deadline through the official PMFBY portal or an applicable bank, service centre or State-authorized channel. Review the crop, area and premium details before submitting."
   },
   {
     "step_id": "A008",
+    "scheme_id": "S002",
+    "step_order": 4,
+    "title": "Save your acknowledgement and report losses promptly",
+    "description": "Keep the application and payment acknowledgement. If crop loss occurs, follow the current State and insurer instructions and report it within the applicable time limit."
+  },
+  {
+    "step_id": "A009",
+    "scheme_id": "S003",
+    "step_order": 1,
+    "title": "Contact a participating bank",
+    "description": "Ask a participating bank about its Kisan Credit Card application process, eligible activities, required documents and current terms."
+  },
+  {
+    "step_id": "A010",
+    "scheme_id": "S003",
+    "step_order": 2,
+    "title": "Prepare the application documents",
+    "description": "Gather the identity, address, bank and land or cultivation documents requested by the bank. Tenant farmers and sharecroppers should ask which cultivation evidence the bank accepts."
+  },
+  {
+    "step_id": "A011",
+    "scheme_id": "S003",
+    "step_order": 3,
+    "title": "Complete and submit the KCC application",
+    "description": "Fill in the bank's KCC application with accurate crop, activity and credit-limit information, attach the requested documents and submit it to the bank."
+  },
+  {
+    "step_id": "A012",
+    "scheme_id": "S003",
+    "step_order": 4,
+    "title": "Complete bank verification",
+    "description": "Respond to any requests for additional information. The bank reviews eligibility and credit details; ask it to explain the approved limit, interest, repayment and renewal terms before accepting."
+  },
+  {
+    "step_id": "A013",
+    "scheme_id": "S004",
+    "step_order": 1,
+    "title": "Contact the local agriculture office",
+    "description": "Ask your local agriculture department or soil-testing laboratory how to request a soil test and whether a field visit or sample drop-off is used in your area."
+  },
+  {
+    "step_id": "A014",
     "scheme_id": "S004",
     "step_order": 2,
-    "title": "Receive and use soil recommendations",
-    "description": "Use the soil report recommendations for crop and nutrient planning."
+    "title": "Provide field details and arrange sampling",
+    "description": "Share the field location and crop details requested by the local service. Follow its instructions for collecting, labelling and submitting a representative soil sample."
+  },
+  {
+    "step_id": "A015",
+    "scheme_id": "S004",
+    "step_order": 3,
+    "title": "Collect your Soil Health Card or test report",
+    "description": "Ask the local service when and where the test result will be available, and check that the report corresponds to your field."
+  },
+  {
+    "step_id": "A016",
+    "scheme_id": "S004",
+    "step_order": 4,
+    "title": "Review and use the recommendations",
+    "description": "Use the soil and nutrient recommendations for crop planning. Ask an agriculture officer to clarify advice that is unclear or does not fit your field."
   }
 ]

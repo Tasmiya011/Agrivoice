@@ -40,6 +40,38 @@ const schemes = [
   {id:4,name:"Soil Health Card Scheme", category:"Other", desc:"Free soil testing and recommendations.", image:images.plant}
 ];
 
+const localizedSchemes = {
+  English: [
+    {name:"PM Kisan Samman Nidhi",category:"Financial Support",desc:"Financial support of ₹6,000 per year to eligible farmers."},
+    {name:"Pradhan Mantri Fasal Bima Yojana",category:"Insurance",desc:"Crop insurance protection for farmers against natural calamities."},
+    {name:"Kisan Credit Card (KCC)",category:"Credit",desc:"Short-term credit support for agricultural needs."},
+    {name:"Soil Health Card Scheme",category:"Other",desc:"Free soil testing and recommendations."}
+  ],
+  Marathi: [
+    {name:"पीएम-किसान सन्मान निधी",category:"आर्थिक सहाय्य",desc:"पात्र शेतकऱ्यांना दरवर्षी ₹6,000 आर्थिक सहाय्य."},
+    {name:"प्रधानमंत्री फसल बीमा योजना",category:"विमा",desc:"नैसर्गिक आपत्तींमुळे होणाऱ्या पिकांच्या नुकसानीसाठी विमा संरक्षण."},
+    {name:"किसान क्रेडिट कार्ड (KCC)",category:"कर्ज",desc:"शेतीच्या गरजांसाठी अल्पकालीन कर्ज सहाय्य."},
+    {name:"मृदा आरोग्य कार्ड योजना",category:"इतर",desc:"माती परीक्षण आणि शिफारसी."}
+  ],
+  Hindi: [
+    {name:"पीएम-किसान सम्मान निधि",category:"वित्तीय सहायता",desc:"पात्र किसानों को प्रति वर्ष ₹6,000 की वित्तीय सहायता।"},
+    {name:"प्रधानमंत्री फसल बीमा योजना",category:"बीमा",desc:"प्राकृतिक आपदाओं से फसल नुकसान के लिए बीमा सुरक्षा।"},
+    {name:"किसान क्रेडिट कार्ड (KCC)",category:"ऋण",desc:"कृषि आवश्यकताओं के लिए अल्पकालिक ऋण सहायता।"},
+    {name:"मृदा स्वास्थ्य कार्ड योजना",category:"अन्य",desc:"मिट्टी परीक्षण और सिफारिशें।"}
+  ],
+  Kannada: [
+    {name:"ಪಿಎಂ-ಕಿಸಾನ್ ಸಮ್ಮಾನ್ ನಿಧಿ",category:"ಆರ್ಥಿಕ ಸಹಾಯ",desc:"ಅರ್ಹ ರೈತರಿಗೆ ವರ್ಷಕ್ಕೆ ₹6,000 ಆರ್ಥಿಕ ಸಹಾಯ."},
+    {name:"ಪ್ರಧಾನಮಂತ್ರಿ ಫಸಲ್ ಬಿಮಾ ಯೋಜನೆ",category:"ವಿಮೆ",desc:"ನೈಸರ್ಗಿಕ ವಿಕೋಪಗಳಿಂದ ಬೆಳೆ ನಷ್ಟಕ್ಕೆ ವಿಮಾ ರಕ್ಷಣೆ."},
+    {name:"ಕಿಸಾನ್ ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್ (KCC)",category:"ಸಾಲ",desc:"ಕೃಷಿ ಅಗತ್ಯಗಳಿಗೆ ಅಲ್ಪಾವಧಿಯ ಸಾಲ ಸಹಾಯ."},
+    {name:"ಮಣ್ಣಿನ ಆರೋಗ್ಯ ಕಾರ್ಡ್ ಯೋಜನೆ",category:"ಇತರೆ",desc:"ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮತ್ತು ಶಿಫಾರಸುಗಳು."}
+  ]
+};
+
+function localizedScheme(scheme, lang) {
+  const localized = localizedSchemes[lang]?.[scheme.id - 1];
+  return localized ? {...scheme, ...localized} : scheme;
+}
+
 const translations = {
   English:{
     home:"Home", schemes:"Government Schemes", voice:"Voice Assistant", documents:"Documents",
@@ -71,7 +103,7 @@ const translations = {
     stepDesc:["Verify if you meet the scheme criteria.","Keep all required documents ready.","Submit your application through the portal or service centre.","Check status using your reference number."],
     simpleProcess:"SIMPLE PROCESS", voiceSupport:"SMART VOICE SUPPORT", appReady:"APPLICATION READY"
   },
-  मराठी:{
+  Marathi:{
     home:"मुख्यपृष्ठ", schemes:"शासकीय योजना", voice:"व्हॉइस सहाय्यक", documents:"कागदपत्रे",
     guidance:"मार्गदर्शन", profile:"प्रोफाइल", login:"लॉगिन", register:"नोंदणी", language:"मराठी",
     heroTitle:"स्मार्ट उपायांसह शेतकऱ्यांना सक्षम बनवा", heroText:"शासकीय योजना, पात्रता, कागदपत्रे आणि इतर माहिती आपल्या भाषेत मिळवा.",
@@ -101,7 +133,7 @@ const translations = {
     stepDesc:["तुम्ही योजनेच्या निकषांवर पात्र आहात की नाही ते तपासा.","सर्व आवश्यक कागदपत्रे तयार ठेवा.","पोर्टल किंवा सेवा केंद्राद्वारे अर्ज सादर करा.","तुमच्या संदर्भ क्रमांकाद्वारे स्थिती तपासा."],
     simpleProcess:"सोपे प्रक्रिया", voiceSupport:"स्मार्ट व्हॉइस सपोर्ट", appReady:"अर्ज तयार", 
   },
-  हिंदी:{
+  Hindi:{
     home:"होम", schemes:"सरकारी योजनाएं", voice:"वॉइस असिस्टेंट", documents:"दस्तावेज़",
     guidance:"मार्गदर्शन", profile:"प्रोफ़ाइल", login:"लॉगिन", register:"पंजीकरण", language:"हिंदी",
     heroTitle:"स्मार्ट समाधानों से किसानों को सशक्त बनाएं", heroText:"सरकारी योजनाओं, पात्रता और दस्तावेज़ों की जानकारी अपनी भाषा में पाएं।",
@@ -131,7 +163,7 @@ const translations = {
     stepDesc:["सुनिश्चित करें कि आप योजना के मानदंडों को पूरा करते हैं।","सभी आवश्यक दस्तावेज़ तैयार रखें।","पोर्टल या सेवा केंद्र के माध्यम से आवेदन जमा करें।","अपने संदर्भ संख्या से स्थिति देखें।"],
     simpleProcess:"सरल प्रक्रिया", voiceSupport:"स्मार्ट वॉइस सपोर्ट", appReady:"आवेदन तैयार"
   },
-  कन्नड:{
+  Kannada:{
     home:"ಮುಖಪುಟ", schemes:"ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು", voice:"ಧ್ವನಿ ಸಹಾಯಕ", documents:"ದಾಖಲೆಗಳು",
     guidance:"ಮಾರ್ಗದರ್ಶನ", profile:"ಪ್ರೊಫೈಲ್", login:"ಲಾಗಿನ್", register:"ನೋಂದಣಿ", language:"ಕನ್ನಡ",
     heroTitle:"ಸ್ಮಾರ್ಟ್ ಪರಿಹಾರಗಳೊಂದಿಗೆ ರೈತರನ್ನು ಸಬಲೀಕರಿಸಿ", heroText:"ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು, ಅರ್ಹತೆ ಮತ್ತು ದಾಖಲೆಗಳ ಮಾಹಿತಿಯನ್ನು ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ಪಡೆಯಿರಿ.",
@@ -171,7 +203,7 @@ function App(){
   const [mobileMenu,setMobileMenu] = useState(false);
   const [isLoggedIn,setIsLoggedIn] = useState(()=>localStorage.getItem("agrivoiceLoggedIn")==="true");
   const [user,setUser] = useState(()=>{try{return JSON.parse(localStorage.getItem("agrivoiceUser"))||{name:"",mobile:"",email:"",farmerType:""}}catch{return {name:"",mobile:"",email:"",farmerType:""}}});
-  const t = translations[lang];
+  const t = translations[lang] || translations.English;
 
   const go = (next) => { setPage(next); setMobileMenu(false); window.scrollTo({top:0,behavior:"smooth"}); };
 
@@ -192,9 +224,9 @@ function App(){
   return <div className="app">
     <Navbar t={t} lang={lang} setLang={setLang} go={go} mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} isLoggedIn={isLoggedIn} user={user} onLogout={handleLogout}/>
     <main>
-      {page==="home" && <Home t={t} go={go} setSelectedScheme={setSelectedScheme}/>} 
-      {page==="schemes" && <Schemes t={t} go={go} setSelectedScheme={setSelectedScheme}/>} 
-      {page==="detail" && <SchemeDetail t={t} go={go} scheme={selectedScheme}/>} 
+      {page==="home" && <Home t={t} lang={lang} go={go} setSelectedScheme={setSelectedScheme}/>}
+      {page==="schemes" && <Schemes t={t} lang={lang} go={go} setSelectedScheme={setSelectedScheme}/>}
+      {page==="detail" && <SchemeDetail t={t} lang={lang} go={go} scheme={selectedScheme}/>}
       {page==="voice" && <Voice t={t}/>} 
       {page==="documents" && <Documents t={t}/>} 
       {page==="guidance" && <Guidance t={t}/>} 
@@ -225,7 +257,7 @@ function Navbar({t,lang,setLang,go,mobileMenu,setMobileMenu,isLoggedIn,user,onLo
       <div className="nav-actions">
         <div className="language">
           <Globe2 size={15}/><select value={lang} onChange={e=>setLang(e.target.value)} aria-label="Language">
-            <option>English</option><option>मराठी</option><option>हिन्दी</option><option>कन्नड</option>
+            <option value="English">English</option><option value="Marathi">Marathi</option><option value="Hindi">Hindi</option><option value="Kannada">Kannada</option>
           </select>
         </div>
         {!isLoggedIn ? <button className="nav-register" onClick={()=>go("register")}><UserPlus size={16}/>{t.register}</button> : <div className="profile-menu-wrap">
@@ -251,7 +283,7 @@ function Navbar({t,lang,setLang,go,mobileMenu,setMobileMenu,isLoggedIn,user,onLo
   </header>
 }
 
-function Home({t,go,setSelectedScheme}){
+function Home({t,lang,go,setSelectedScheme}){
   return <div>
     <section className="hero">
       <img src={images.hero} alt="Green agricultural field"/>
@@ -273,7 +305,7 @@ function Home({t,go,setSelectedScheme}){
     </section>
     <section className="container section">
       <div className="section-head"><div><span className="eyebrow green">{t.supportTag}</span><h2>{t.popular}</h2></div><button className="text-btn" onClick={()=>go("schemes")}>{t.viewAll} <ArrowRight size={16}/></button></div>
-      <div className="scheme-grid">{schemes.map(s=><SchemeCard key={s.id} scheme={s} t={t} onClick={()=>{setSelectedScheme(s);go("detail")}}/>)}</div>
+      <div className="scheme-grid">{schemes.map(s=><SchemeCard key={s.id} scheme={localizedScheme(s,lang)} t={t} onClick={()=>{setSelectedScheme(s);go("detail")}}/>)}</div>
     </section>
     <section className="container info-banner">
       <div><Sprout size={36}/><div><h3>{t.supportTitle}</h3><p>{t.supportText}</p></div></div>
@@ -286,24 +318,43 @@ function Feature({icon,title,text,go}){return <button className="feature-card" o
 
 function SchemeCard({scheme,t,onClick}){return <article className="scheme-card"><img src={scheme.image} alt={scheme.name}/><div className="scheme-body"><span className="pill">{scheme.category}</span><h3>{scheme.name}</h3><p>{scheme.desc}</p><button className="text-btn" onClick={onClick}>{t.details} <ArrowRight size={15}/></button></div></article>}
 
-function Schemes({t,go,setSelectedScheme}){
+function Schemes({t,lang,go,setSelectedScheme}){
   const [q,setQ]=useState("");
-  const filtered=useMemo(()=>schemes.filter(s=>s.name.toLowerCase().includes(q.toLowerCase())||s.category.toLowerCase().includes(q.toLowerCase())),[q]);
+  const filtered=useMemo(()=>schemes.filter(s=>{
+    const localized=localizedScheme(s,lang);
+    const query=q.toLowerCase();
+    return [s.name,s.category,s.desc,localized.name,localized.category,localized.desc]
+      .some(value=>value.toLowerCase().includes(query));
+  }),[q,lang]);
   return <section className="container page">
     <div className="page-banner" style={{backgroundImage:`url(${images.field})`}}><div><span className="eyebrow">AGRI SUPPORT</span><h1>{t.schemeTitle}</h1><p>{t.schemeText}</p></div></div>
     <div className="search-row"><div className="search-box"><Search size={18}/><input value={q} onChange={e=>setQ(e.target.value)} placeholder={t.search}/></div><button className="outline" onClick={()=>go("eligibility")}>{t.check}</button></div>
-    <div className="scheme-grid large">{filtered.map(s=><SchemeCard key={s.id} scheme={s} t={t} onClick={()=>{setSelectedScheme(s);go("detail")}}/>)}</div>
+    <div className="scheme-grid large">{filtered.map(s=><SchemeCard key={s.id} scheme={localizedScheme(s,lang)} t={t} onClick={()=>{setSelectedScheme(s);go("detail")}}/>)}</div>
   </section>
 }
 
-function SchemeDetail({t,go,scheme}){return <section className="container page"><button className="back-btn" onClick={()=>go("schemes")}><ArrowLeft size={16}/> {t.back}</button><div className="detail-card"><div className="detail-image"><img src={scheme.image} alt={scheme.name}/></div><div className="detail-main"><span className="pill">{scheme.category}</span><h1>{scheme.name}</h1><p>{scheme.desc}</p><h3>{t.benefits}</h3><ul className="checks"><li><CheckCircle2/> ₹6,000 per year for eligible farmers</li><li><CheckCircle2/> Direct Benefit Transfer (DBT)</li><li><CheckCircle2/> Simple online/offline application support</li></ul><button className="primary" onClick={()=>go("eligibility")}>{t.check}<ArrowRight size={17}/></button></div></div><div className="content-card"><h2>Scheme Overview</h2><p>This section is designed to be connected to your backend API later. It can show official scheme eligibility, benefits, required documents, application link and status.</p></div></section>}
+function SchemeDetail({t,lang,go,scheme}){
+  const localized=localizedScheme(scheme,lang);
+  return <section className="container page"><button className="back-btn" onClick={()=>go("schemes")}><ArrowLeft size={16}/> {t.back}</button><div className="detail-card"><div className="detail-image"><img src={localized.image} alt={localized.name}/></div><div className="detail-main"><span className="pill">{localized.category}</span><h1>{localized.name}</h1><p>{localized.desc}</p><h3>{t.benefits}</h3><ul className="checks"><li><CheckCircle2/> ₹6,000 per year for eligible farmers</li><li><CheckCircle2/> Direct Benefit Transfer (DBT)</li><li><CheckCircle2/> Simple online/offline application support</li></ul><button className="primary" onClick={()=>go("eligibility")}>{t.check}<ArrowRight size={17}/></button></div></div><div className="content-card"><h2>Scheme Overview</h2><p>This section is designed to be connected to your backend API later. It can show official scheme eligibility, benefits, required documents, application link and status.</p></div></section>
+}
+
+function renderMessage(text) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+  return text.split(urlRegex).map((part, i) => {
+    if (/^https?:\/\//i.test(part)) {
+      return <a key={i} href={part} target="_blank" rel="noopener noreferrer" style={{color:"#2e7d32",textDecoration:"underline"}}>{part}</a>;
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
 
 function Voice({t}){
   const languageMap = {
     English: { key: "english", speech: "en-IN" },
-    "मराठी": { key: "marathi", speech: "mr-IN" },
-    "हिन्दी": { key: "hindi", speech: "hi-IN" },
-    "कन्नड": { key: "kannada", speech: "kn-IN" },
+    Marathi: { key: "marathi", speech: "mr-IN" },
+    Hindi: { key: "hindi", speech: "hi-IN" },
+    Kannada: { key: "kannada", speech: "kn-IN" },
   };
   const [language, setLanguage] = useState("English");
   const [input, setInput] = useState("");
@@ -393,7 +444,7 @@ function Voice({t}){
         <div className="voice-language-control">
           <label>Voice language</label>
           <select value={language} onChange={e=>changeLanguage(e.target.value)}>
-            {Object.keys(languageMap).map(name => <option key={name}>{name}</option>)}
+            {Object.keys(languageMap).map(name => <option key={name} value={name}>{name}</option>)}
           </select>
         </div>
         <div className="voice-examples">
@@ -421,12 +472,85 @@ function Voice({t}){
         {messages.length > 0 && <div className="voice-messages">
           {messages.map((m,i)=><div key={i} className={`voice-message ${m.role}`}>
             <span>{m.role === "user" ? "You" : "AgriVoice"}</span>
-            <p>{m.text}</p>
+            <p>{renderMessage(m.text)}</p>
             {m.role === "assistant" && <button className="voice-speak" onClick={()=>speak(m.text)}><Volume2 size={14}/> Speak</button>}
           </div>)}
         </div>}
       </div>
     </div>
+  </section>
+}
+
+function Eligibility({t}){
+  const [form,setForm]=useState({
+    state:"",
+    land_owner:"",
+    cultivates_land:"",
+    farmer_type:"",
+    income_tax_payer:"",
+    pm_kisan_exclusion:"",
+    crop:"",
+    crop_damage:""
+  });
+  const [result,setResult]=useState(null);
+  const [loading,setLoading]=useState(false);
+  const [error,setError]=useState("");
+
+  const update=(field,value)=>setForm(current=>({...current,[field]:value}));
+  const submit=async()=>{
+    setError("");
+    setLoading(true);
+    try{
+      const profile={
+        ...form,
+        land_owner:form.land_owner===""?null:form.land_owner==="true",
+        cultivates_land:form.cultivates_land===""?null:form.cultivates_land==="true",
+        income_tax_payer:form.income_tax_payer===""?null:form.income_tax_payer==="true",
+        pm_kisan_exclusion:form.pm_kisan_exclusion===""?null:form.pm_kisan_exclusion==="true",
+        crop_damage:form.crop_damage===""?null:form.crop_damage==="true"
+      };
+      setResult(await api.checkEligibility(profile));
+    }catch(err){
+      setError(err.message || "Could not check eligibility. Please try again.");
+    }finally{
+      setLoading(false);
+    }
+  };
+
+  const yesNoOptions=<><option value="">Select an answer</option><option value="true">Yes</option><option value="false">No</option></>;
+  const eligibleSchemes=result?.eligible_schemes || result?.results || [];
+  const allResults=[...eligibleSchemes,...(result?.not_eligible_schemes || [])];
+
+  return <section className="container page">
+    <div className="split-title"><div><span className="eyebrow green">{t.check}</span><h1>{t.check}</h1><p>Answer a few questions to see preliminary matches. This is guidance only, not an official eligibility decision.</p></div></div>
+    <div className="content-card">
+      <div className="auth-form">
+        <label>State<input value={form.state} onChange={e=>update("state",e.target.value)} autoComplete="address-level1" required/></label>
+        <label>Do you own agricultural land?<select value={form.land_owner} onChange={e=>update("land_owner",e.target.value)}>{yesNoOptions}</select></label>
+        <label>Do you cultivate agricultural land?<select value={form.cultivates_land} onChange={e=>update("cultivates_land",e.target.value)}>{yesNoOptions}</select></label>
+        <label>{t.farmerType}<select value={form.farmer_type} onChange={e=>update("farmer_type",e.target.value)}><option value="">Select farmer type</option><option value="Landowner">Landowner</option><option value="Owner cultivator">Owner cultivator</option><option value="Tenant farmer">Tenant farmer</option><option value="Sharecropper">Sharecropper</option><option value="Cultivator">Cultivator</option><option value="Farmer">Farmer</option></select></label>
+        <label>Are you an income-tax payer?<select value={form.income_tax_payer} onChange={e=>update("income_tax_payer",e.target.value)}>{yesNoOptions}</select></label>
+        <label>Does any other PM-KISAN exclusion apply (such as specified government service, constitutional office, or registered profession)?<select value={form.pm_kisan_exclusion} onChange={e=>update("pm_kisan_exclusion",e.target.value)}>{yesNoOptions}</select></label>
+        <label>Crop (optional)<input value={form.crop} onChange={e=>update("crop",e.target.value)} maxLength={40}/></label>
+        <label>Has your crop been damaged?<select value={form.crop_damage} onChange={e=>update("crop_damage",e.target.value)}>{yesNoOptions}</select></label>
+        {error&&<div className="auth-error" role="alert">{error}</div>}
+        <button className="primary full" onClick={submit} disabled={loading}>{loading?"Checking...":t.check}</button>
+      </div>
+    </div>
+    {result&&<div className="content-card">
+      <h2>Preliminary results</h2>
+      <p>{result.notice}</p>
+      {result.missing_information?.length>0&&<p>Please provide: {result.missing_information.join(", ").replaceAll("_"," ")}.</p>}
+      {allResults.length===0&&result.missing_information?.length===0&&<p>No potentially eligible schemes matched the answers provided. Verify scheme rules with the official department.</p>}
+      {allResults.map(item=><article className="doc-row" key={item.scheme_id}>
+        <div><b>{item.scheme}</b><p>{item.status}</p>
+          {item.benefits&&<p>{item.benefits}</p>}
+          {item.reasons?.map(reason=><p key={reason}>{reason}</p>)}
+          {item.warnings?.map(warning=><p key={warning}>{warning}</p>)}
+          {item.application_link&&<a href={item.application_link} target="_blank" rel="noreferrer">Official scheme information</a>}
+        </div>
+      </article>)}
+    </div>}
   </section>
 }
 

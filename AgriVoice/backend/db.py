@@ -21,13 +21,13 @@ def init_db():
         with open(SCHEMA_PATH, encoding="utf-8") as f:
             conn.executescript(f.read())
 
+        def load(name):
+            with open(os.path.join(DATA_DIR, name), encoding="utf-8") as f:
+                return json.load(f)
+
         # Seed only when the database is empty.
         count = conn.execute("SELECT COUNT(*) FROM schemes").fetchone()[0]
         if count == 0:
-            def load(name):
-                with open(os.path.join(DATA_DIR, name), encoding="utf-8") as f:
-                    return json.load(f)
-
             for s in load("schemes.json"):
                 conn.execute(
                     """INSERT INTO schemes
@@ -60,12 +60,19 @@ def init_db():
                     (q["faq_id"], q["scheme_id"], q["question"], q["answer"])
                 )
 
-            for step in load("application_steps.json"):
-                conn.execute(
-                    "INSERT INTO application_steps VALUES (?, ?, ?, ?, ?)",
-                    (step["step_id"], step["scheme_id"], step["step_order"],
-                     step["title"], step["description"])
-                )
+        for step in load("application_steps.json"):
+            conn.execute(
+                """INSERT INTO application_steps
+                   (step_id, scheme_id, step_order, title, description)
+                   VALUES (?, ?, ?, ?, ?)
+                   ON CONFLICT(step_id) DO UPDATE SET
+                     scheme_id=excluded.scheme_id,
+                     step_order=excluded.step_order,
+                     title=excluded.title,
+                     description=excluded.description""",
+                (step["step_id"], step["scheme_id"], step["step_order"],
+                 step["title"], step["description"])
+            )
 
 
 def row_to_dict(row):

@@ -1,8 +1,6 @@
-"""Conversation orchestration for the AgriVoice web application.
+# AgriVoice/backend/voice/voice_assistant.py
 
-The browser handles microphone capture and speech playback.  This class handles
-language conversion, intent detection and multi-turn conversation state.
-"""
+"""Conversation orchestration for the AgriVoice web application."""
 
 from .nlp_engine import NLPEngine
 from .intents_config import LANGUAGE_MAPPING
@@ -19,9 +17,6 @@ class VoiceAssistant:
             key: {"stt": self._stt_code(key), "tts": val["code"]}
             for key, val in SUPPORTED_LANGUAGES.items()
         }
-
-        # Optional server-side speech components. They are not required for the
-        # web app because the browser owns the microphone/speaker.
         self.stt = None
         self.tts = None
 
@@ -45,16 +40,20 @@ class VoiceAssistant:
             return {"message": translate_text(msg, self.current_language), "done": False}
 
         user_input = str(user_input).strip()
+
+        # Translate input to English for NLP processing
         english_input = translate_to_english(user_input, self.current_language)
 
         try:
             response = self.nlp.process_conversation(english_input)
-        except Exception:
+        except Exception as e:
+            print(f"❌ NLP error: {e}")
             response = {
                 "message": "Sorry, I had trouble understanding that. Please try again.",
                 "done": False,
             }
 
+        # Translate response back to user's language
         if isinstance(response, dict):
             message = response.get("message", "I didn't understand.")
             if self.current_language != "english":
