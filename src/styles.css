@@ -101,3 +101,151 @@
 .empty-state { border: 1px solid #d9e7dc; background: #f7fbf7; border-radius: 14px; padding: 22px; margin-top: 18px; }
 .empty-state h3 { margin-top: 0; }
 .empty-state p { margin-bottom: 0; line-height: 1.6; }
+
+/* Eligibility check */
+.eligibility-page{padding-top:34px}
+.eligibility-hero{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:230px;overflow:hidden;padding:34px 40px;margin-bottom:24px;border:1px solid #d8eadc;border-radius:20px;background:linear-gradient(105deg,#eff9f0 0%,#f8fbf6 62%,#e8f5e9 100%)}
+.eligibility-hero-copy{position:relative;z-index:1;max-width:640px}
+.eligibility-hero h1{margin:9px 0 8px;font:800 clamp(32px,4vw,42px)/1.12 Nunito;color:var(--deep)}
+.eligibility-hero-copy>p{max-width:570px;margin:0;color:#597166;font-size:16px;line-height:1.65}
+.eligibility-assurance{display:flex;align-items:center;gap:9px;margin-top:18px;color:#35694e;font-size:13px;font-weight:700}
+.eligibility-assurance svg{flex:none}
+.eligibility-hero-art{position:absolute;top:0;right:0;width:38%;height:100%;overflow:hidden}
+.eligibility-hero-art:after{position:absolute;inset:0;content:"";background:linear-gradient(90deg,#f2f9f2 0%,rgba(242,249,242,.4) 38%,rgba(242,249,242,.08) 100%)}
+.eligibility-hero-art img{width:100%;height:100%;object-fit:cover;opacity:.62}
+.eligibility-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;align-items:start;gap:22px}
+.eligibility-main{display:grid;gap:18px;min-width:0}
+.eligibility-form-card{overflow:hidden;border:1px solid var(--line);border-radius:17px;background:#fff;box-shadow:0 8px 28px rgba(10,60,40,.06)}
+.eligibility-card-heading{display:flex;align-items:center;gap:14px;padding:22px 25px;border-bottom:1px solid #e8efe9}
+.eligibility-step-number{display:grid;width:42px;height:42px;flex:none;place-items:center;border-radius:13px;background:#e9f6ec;color:var(--green);font:800 14px Nunito}
+.eligibility-card-heading h2{margin:0;font:800 21px Nunito;color:var(--ink)}
+.eligibility-card-heading p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.eligibility-required-note{margin-left:auto;color:#748379;font-size:11px;white-space:nowrap}
+.eligibility-required-note b,.eligibility-field>span b{color:#c45b43}
+.eligibility-form{padding:22px 25px 24px}
+.eligibility-fieldset{min-width:0;margin:0;padding:0 0 22px;border:0;border-bottom:1px solid #e8efe9}
+.eligibility-fieldset+.eligibility-fieldset{padding-top:20px}
+.eligibility-fieldset legend{width:100%;margin-bottom:14px;padding:0;color:#315a43;font:800 15px Nunito}
+.eligibility-field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+.eligibility-field{display:flex;min-width:0;flex-direction:column;gap:7px;color:#294b3a;font-size:13px;font-weight:700;line-height:1.4}
+.eligibility-field>select,.eligibility-field>input{width:100%;min-height:46px;padding:10px 12px;border:1px solid #d7e4dc;border-radius:10px;outline:none;background:#fff;color:#294337;font-size:14px;font-weight:400}
+.eligibility-field>select:focus,.eligibility-field>input:focus{border-color:#43a56f;box-shadow:0 0 0 3px rgba(8,116,67,.11)}
+.eligibility-field>select:disabled{background:#f3f6f3;color:#8a9890;cursor:not-allowed}
+.eligibility-field>input::placeholder{color:#97a39b}
+.eligibility-field>small{color:#77877e;font-size:11px;font-weight:400;line-height:1.45}
+.eligibility-form-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:20px}
+.eligibility-form-footer>p{display:flex;align-items:flex-start;gap:8px;max-width:440px;margin:0;color:#6a7e72;font-size:12px;line-height:1.5}
+.eligibility-form-footer>p svg{flex:none;color:var(--green)}
+.eligibility-form-footer .primary{min-height:46px;white-space:nowrap}
+.eligibility-error{margin-top:16px;padding:12px 14px;border:1px solid #f3c7c0;border-radius:10px;background:#fff4f2;color:#9c362d;font-size:13px;line-height:1.5}
+.eligibility-side-card{position:sticky;top:96px;padding:22px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 7px 24px rgba(10,60,40,.05)}
+.eligibility-side-icon{display:grid;width:40px;height:40px;place-items:center;border-radius:12px;background:var(--mint);color:var(--green)}
+.eligibility-side-card h2{margin:14px 0 16px;font:800 19px Nunito}
+.eligibility-side-card ol{display:grid;gap:17px;margin:0;padding:0;list-style:none}
+.eligibility-side-card li{display:flex;align-items:flex-start;gap:11px}
+.eligibility-side-card li>span{display:grid;width:25px;height:25px;flex:none;place-items:center;border-radius:50%;background:#edf7ef;color:var(--green);font-size:11px;font-weight:800}
+.eligibility-side-card li b{display:block;margin:2px 0 3px;color:#315343;font-size:13px}
+.eligibility-side-card li p,.eligibility-side-note p{margin:0;color:#718077;font-size:12px;line-height:1.5}
+.eligibility-side-note{margin-top:20px;padding:13px;border-radius:10px;background:#f5f8f5}
+.eligibility-side-note>b{display:block;margin-bottom:4px;color:#496653;font-size:12px}
+.eligibility-visual{position:relative;min-height:180px;overflow:hidden;border-radius:15px;background:#e9f5ec}
+.eligibility-visual>img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:.7}
+.eligibility-visual>.result{position:relative;z-index:1;max-width:330px;margin:20px;padding:17px;border:1px solid rgba(255,255,255,.8);border-radius:12px;background:rgba(255,255,255,.94);box-shadow:0 7px 22px rgba(15,65,40,.1)}
+.eligibility-visual>.result svg{width:22px;color:var(--green)}
+.eligibility-visual>.result h2{margin:5px 0;font:800 18px Nunito}
+.eligibility-visual>.result p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.eligibility-results{margin-top:24px;padding:25px;border:1px solid var(--line);border-radius:17px;background:#fff;box-shadow:0 8px 28px rgba(10,60,40,.05)}
+.eligibility-results-heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:12px}
+.eligibility-results-heading h2{margin:5px 0 0;font:800 25px Nunito}
+.eligibility-match-count{padding:7px 11px;border-radius:999px;background:#eaf7ef;color:var(--green);font-size:12px;font-weight:800}
+.eligibility-result-notice{margin:0 0 16px;color:var(--muted);font-size:13px;line-height:1.55}
+.eligibility-incomplete,.eligibility-empty{display:flex;gap:12px;margin:15px 0;padding:15px;border:1px solid #e8dfbd;border-radius:11px;background:#fffcf2;color:#695b2c}
+.eligibility-incomplete{flex-direction:column;gap:4px;font-size:13px;line-height:1.5}
+.eligibility-empty{align-items:flex-start;border-color:#dce9df;background:#f7fbf7;color:#43624f}
+.eligibility-empty svg{flex:none}
+.eligibility-empty b{display:block;margin:1px 0 4px}
+.eligibility-empty p{margin:0;color:#6f8075;font-size:13px;line-height:1.55}
+.eligibility-result-list{display:grid;gap:13px}
+.eligibility-result-card{padding:18px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.eligibility-result-card.potential{border-color:#cce6d2;background:#fcfffc}
+.eligibility-result-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.eligibility-category{color:#648071;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+.eligibility-result-top h3{margin:4px 0 0;font:800 18px Nunito}
+.eligibility-status{display:inline-flex;align-items:center;gap:6px;max-width:46%;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800;line-height:1.3;text-align:center}
+.eligibility-status.positive{background:#e7f6eb;color:#137443}
+.eligibility-status.neutral{background:#f0f3f1;color:#68786f}
+.eligibility-benefit{margin:10px 0;color:#586e62;font-size:13px;line-height:1.55}
+.eligibility-detail{margin:8px 0;color:#65776d;font-size:12px;line-height:1.55}
+.eligibility-warning{padding:9px 11px;border-radius:8px;background:#fff9eb;color:#76602a}
+.eligibility-result-card .result-actions{margin-top:14px}
+.eligibility-result-card .result-actions>.primary{font-size:12px;text-decoration:none}
+@media(max-width:900px){.eligibility-layout{grid-template-columns:minmax(0,1fr) 250px;gap:16px}.eligibility-side-card{padding:18px}}
+@media(max-width:760px){.eligibility-page{padding-top:25px}.eligibility-hero{min-height:215px;padding:26px 22px}.eligibility-hero-art{width:48%;opacity:.42}.eligibility-hero-copy>p{max-width:460px;font-size:14px}.eligibility-assurance{align-items:flex-start;font-size:11px;line-height:1.5}.eligibility-layout{grid-template-columns:1fr}.eligibility-side-card{position:static}.eligibility-form-footer{align-items:stretch;flex-direction:column}.eligibility-form-footer .primary{width:100%}.eligibility-visual{min-height:150px}}
+@media(max-width:520px){.eligibility-hero{padding:22px 18px}.eligibility-hero-art{width:65%;opacity:.25}.eligibility-card-heading{align-items:flex-start;padding:18px 17px}.eligibility-step-number{width:36px;height:36px}.eligibility-card-heading h2{font-size:18px}.eligibility-required-note{display:none}.eligibility-form{padding:18px 17px}.eligibility-field-grid{grid-template-columns:1fr;gap:13px}.eligibility-results{padding:19px 16px}.eligibility-results-heading{align-items:flex-start;flex-direction:column}.eligibility-results-heading h2{font-size:22px}.eligibility-result-top{flex-direction:column}.eligibility-status{max-width:none}.eligibility-result-card{padding:15px}.eligibility-result-card .result-actions{align-items:stretch;flex-direction:column}.eligibility-result-card .result-actions>.primary{justify-content:center}.eligibility-result-card .scheme-mini-details{min-width:0}}
+
+/* Document checklist and local file selection */
+.documents-page{padding-top:36px}
+.documents-hero{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px;padding:30px 34px;border:1px solid #d8eadc;border-radius:18px;background:linear-gradient(105deg,#eff9f0,#f8fbf6)}
+.documents-hero h1{margin:8px 0;font:800 36px Nunito;color:var(--deep)}
+.documents-hero p{max-width:650px;margin:0;color:var(--muted);line-height:1.6}
+.documents-progress-summary{display:flex;min-width:155px;flex-direction:column;align-items:center;gap:3px;padding:14px;border:1px solid #d7e9db;border-radius:13px;background:rgba(255,255,255,.8);color:var(--green)}
+.documents-progress-summary>span{font:800 27px Nunito}
+.documents-progress-summary small{font-size:15px;color:#6c8375}
+.documents-progress-summary>b{font-size:11px}
+.documents-layout{display:grid;grid-template-columns:minmax(0,1fr) 285px;align-items:start;gap:20px}
+.documents-main{display:grid;gap:13px;min-width:0}
+.documents-progress-card,.documents-upload-card{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 5px 18px rgba(10,60,40,.04)}
+.documents-progress-card{padding:17px 19px}
+.documents-progress-card>div:first-child{display:flex;justify-content:space-between;gap:12px;margin-bottom:11px}
+.documents-progress-card b{font:800 15px Nunito}
+.documents-progress-card span{color:var(--muted);font-size:12px}
+.documents-progress-track{height:7px;overflow:hidden;border-radius:999px;background:#edf2ee}
+.documents-progress-track>span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#087443,#42aa68);transition:width .2s ease}
+.documents-list{display:grid;gap:10px}
+.document-upload-card{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:14px;padding:17px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:border-color .2s,background .2s}
+.document-upload-card.is-prepared{border-color:#c8e4d0;background:#fcfffc}
+.document-upload-icon{display:grid;width:42px;height:42px;place-items:center;border-radius:12px;background:#edf7ef;color:var(--green)}
+.document-upload-title{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.document-upload-title h2{margin:0;color:var(--ink);font:800 15px Nunito}
+.document-upload-title>span{padding:4px 7px;border-radius:999px;background:#f0f3f1;color:#708077;font-size:9px;font-weight:800}
+.document-upload-info>p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.document-selected-file{display:flex;align-items:center;gap:6px;margin-top:9px;color:#187548;font-size:11px}
+.document-selected-file svg{flex:none}
+.document-selected-file>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.document-selected-file small{flex:none;color:#718077}
+.document-file-error{color:#ad3b2e!important;font-weight:700}
+.document-upload-actions{display:flex;min-width:135px;flex-direction:column;align-items:flex-end;gap:7px}
+.document-file-status{font-size:10px;font-weight:800}
+.document-file-status.needed{color:#77847c}
+.document-file-status.ready{color:#187548}
+.document-choose-file{position:relative;display:inline-flex;min-height:35px;align-items:center;justify-content:center;gap:6px;overflow:hidden;padding:8px 11px;border:1px solid #b8d9c1;border-radius:9px;background:#fff;color:var(--green);font-size:11px;font-weight:800;white-space:nowrap;cursor:pointer}
+.document-choose-file:hover{background:#f0f8f1}
+.document-choose-file:focus-within{outline:3px solid rgba(8,116,67,.18);outline-offset:2px}
+.document-choose-file input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.document-remove-file{border:0;background:none;color:#78877e;font-size:10px;font-weight:700;text-decoration:underline}
+.documents-local-note{display:flex;align-items:flex-start;gap:10px;padding:13px 15px;border:1px solid #e8dfbd;border-radius:11px;background:#fffcf2;color:#715d28}
+.documents-local-note svg{flex:none;margin-top:2px}
+.documents-local-note p{margin:0;font-size:11px;line-height:1.55}
+.documents-help-panel{position:sticky;top:96px;padding:21px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:0 7px 24px rgba(10,60,40,.05)}
+.documents-help-icon{display:grid;width:40px;height:40px;place-items:center;border-radius:12px;background:var(--mint);color:var(--green)}
+.documents-help-panel h2{margin:13px 0;font:800 18px Nunito}
+.documents-help-panel>ul{display:grid;gap:10px;margin:0;padding-left:18px;color:#607369;font-size:12px;line-height:1.5}
+.documents-help-callout{margin-top:19px;padding:14px;border-radius:11px;background:#f3f8f3}
+.documents-help-callout>b{font:800 14px Nunito}
+.documents-help-callout>p{margin:5px 0 12px;color:var(--muted);font-size:12px;line-height:1.5}
+.documents-help-callout>.outline{justify-content:center;width:100%;font-size:11px}
+@media(max-width:850px){.documents-layout{grid-template-columns:1fr}.documents-help-panel{position:static}}
+@media(max-width:600px){.documents-page{padding-top:25px}.documents-hero{align-items:flex-start;padding:22px;flex-direction:column}.documents-hero h1{font-size:30px}.documents-progress-summary{min-width:0;flex-direction:row;justify-content:center;width:100%;padding:9px}.documents-progress-summary>span{font-size:20px}.document-upload-card{grid-template-columns:36px minmax(0,1fr);align-items:start;gap:10px;padding:14px}.document-upload-icon{width:36px;height:36px}.document-upload-actions{grid-column:2;align-items:flex-start;min-width:0;flex-direction:row;flex-wrap:wrap;justify-content:flex-start}.documents-progress-card>div:first-child{align-items:flex-start;flex-direction:column;gap:4px}}
+
+/* Official scheme summaries and source links */
+.scheme-legal-list{display:grid;gap:10px;margin:0;padding-left:20px;color:#536b60;font-size:14px;line-height:1.65}
+.scheme-legal-list li::marker{color:var(--green)}
+.scheme-legal-note{max-width:850px;margin:0 0 13px;color:#6b786f;font-size:12px;line-height:1.55}
+.scheme-source-list{display:flex;flex-wrap:wrap;gap:9px}
+.scheme-action-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.scheme-action-row .outline{text-decoration:none}
+.scheme-source-list a{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid #cce2d2;border-radius:9px;background:#fff;color:var(--green);font-size:12px;font-weight:800;text-decoration:none}
+.scheme-source-list a:hover{background:#f0f8f1}
+.official-link-card.scheme-official-card{align-items:flex-start!important}
+.official-link-card.scheme-official-card>div{width:100%}
+@media(max-width:600px){.scheme-legal-list{font-size:13px}.scheme-source-list{flex-direction:column}.scheme-source-list a{justify-content:space-between}.scheme-action-row{align-items:stretch;flex-direction:column}.scheme-action-row>*{justify-content:center}}
